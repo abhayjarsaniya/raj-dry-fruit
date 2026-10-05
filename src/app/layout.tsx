@@ -8,6 +8,7 @@ import { InquiryForm } from "@/components/inquiry-form";
 import { MobileDrawer } from "@/components/mobile-drawer";
 import { SearchDialog } from "@/components/search-dialog";
 import { StoreProvider } from "@/components/store";
+// Raj Dryfruits official website layout
 import "./globals.css";
 
 const serif = Cormorant_Garamond({
