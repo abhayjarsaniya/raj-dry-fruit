@@ -192,12 +192,20 @@ export function HomePage() {
       <section id="collections" className="w-full border-t border-stone-200/60 bg-white py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <SectionHeading
-              accent="almond"
-              eyebrow={collections["dry-fruits"].eyebrow}
-              title={collections["dry-fruits"].title}
-              text="Clean Californian almonds, sweet Indian cashews, Iranian pistachios and plump dates graded for pure natural flavour."
-            />
+            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
+              <SectionHeading
+                accent="almond"
+                eyebrow={collections["dry-fruits"].eyebrow}
+                title={collections["dry-fruits"].title}
+                text="Clean Californian almonds, sweet Indian cashews, Iranian pistachios and plump dates graded for pure natural flavour."
+              />
+              <Link
+                href="/dry-fruits"
+                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
+              >
+                Explore Dry Fruits →
+              </Link>
+            </div>
           </Reveal>
           <div className="mt-5 sm:mt-8">
             <ProductCarousel products={dry} href="/dry-fruits" label="Explore All Dry Fruits →" />
@@ -211,15 +219,23 @@ export function HomePage() {
       <section className="w-full border-t border-stone-200/60 bg-[#FAF8F6] py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <SectionHeading
-              accent="gold"
-              eyebrow="Customer Favourites"
-              title="The Products Everyone Keeps Coming Back For."
-              text="If you only have a minute, these are the signature selections our Ahmedabad customers love best."
-            />
+            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
+              <SectionHeading
+                accent="gold"
+                eyebrow="Customer Favourites"
+                title="The Products Everyone Keeps Coming Back For."
+                text="If you only have a minute, these are the signature selections our Ahmedabad customers love best."
+              />
+              <Link
+                href="/best-sellers"
+                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
+              >
+                Explore Best Sellers →
+              </Link>
+            </div>
           </Reveal>
           <div className="mt-5 sm:mt-8">
-            <ProductCarousel products={loved} href="/best-sellers" label="Shop Best Sellers →" />
+            <ProductCarousel products={loved} href="/best-sellers" label="Explore All Best Sellers →" />
           </div>
         </div>
       </section>
@@ -230,15 +246,23 @@ export function HomePage() {
       <section className="w-full border-t border-stone-200/60 bg-white py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <SectionHeading
-              accent="cocoa"
-              eyebrow={collections.chocolates.eyebrow}
-              title={collections.chocolates.title}
-              text="A softer kind of luxury. Handcrafted dark bark, creamy milk pralines, and gift boxes made for sweet moments."
-            />
+            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
+              <SectionHeading
+                accent="cocoa"
+                eyebrow={collections.chocolates.eyebrow}
+                title={collections.chocolates.title}
+                text="A softer kind of luxury. Handcrafted dark bark, creamy milk pralines, and gift boxes made for sweet moments."
+              />
+              <Link
+                href="/chocolates"
+                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
+              >
+                Explore Chocolates →
+              </Link>
+            </div>
           </Reveal>
           <div className="mt-5 sm:mt-8">
-            <ProductCarousel products={chocolates} href="/chocolates" label="Explore Chocolates →" />
+            <ProductCarousel products={chocolates} href="/chocolates" label="Explore All Chocolates →" />
           </div>
         </div>
       </section>
@@ -249,15 +273,23 @@ export function HomePage() {
       <section className="w-full border-t border-stone-200/60 bg-[#FAF8F6] py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <SectionHeading
-              accent="caramel"
-              eyebrow={collections["coffee-tea"].eyebrow}
-              title={collections["coffee-tea"].title}
-              text="Filter coffee for the traditional tumbler. Darjeeling first flush and Kashmiri kahwa for the quiet cup."
-            />
+            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
+              <SectionHeading
+                accent="caramel"
+                eyebrow={collections["coffee-tea"].eyebrow}
+                title={collections["coffee-tea"].title}
+                text="Filter coffee for the traditional tumbler. Darjeeling first flush and Kashmiri kahwa for the quiet cup."
+              />
+              <Link
+                href="/coffee-tea"
+                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
+              >
+                Explore Coffee & Tea →
+              </Link>
+            </div>
           </Reveal>
           <div className="mt-5 sm:mt-8">
-            <ProductCarousel products={brews} href="/coffee-tea" label="Explore Coffee & Tea →" />
+            <ProductCarousel products={brews} href="/coffee-tea" label="Explore All Coffee & Tea →" />
           </div>
         </div>
       </section>
