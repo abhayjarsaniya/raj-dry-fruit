@@ -52,10 +52,10 @@ export function ProductCarousel({
         </div>
       </div>
 
-      {/* Swipeable Carousel: 100% native smooth momentum finger swipe on mobile */}
+      {/* Swipeable Carousel: smooth horizontal browsing while allowing native vertical page scrolling */}
       <div
         ref={scroller}
-        className="no-scrollbar flex snap-x snap-mandatory gap-2.5 overflow-x-auto pb-3 touch-pan-x overscroll-x-contain sm:gap-4"
+        className="no-scrollbar flex snap-x snap-mandatory gap-2.5 overflow-x-auto pb-3 touch-pan-y sm:gap-4"
       >
         {products.map((product, index) => (
           <div
