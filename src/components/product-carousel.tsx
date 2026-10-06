@@ -29,8 +29,10 @@ export function ProductCarousel({
 
   // Desktop Mouse Drag to Scroll
   function handleMouseDown(e: React.MouseEvent<HTMLDivElement>) {
-    // Ignore right/middle clicks or clicks on interactive buttons
+    // Only handle primary button on devices with a mouse (not coarse touch pointers)
     if (e.button !== 0) return;
+    if (typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches) return;
+
     const target = e.target as HTMLElement;
     if (target.closest("button") || target.closest("input") || target.closest("[role='group']")) {
       return;
@@ -116,14 +118,19 @@ export function ProductCarousel({
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
         onClickCapture={handleClickCapture}
-        className={`no-scrollbar flex snap-x snap-proximity gap-2.5 overflow-x-auto pb-3 touch-pan-y sm:gap-4 ${
+        style={{
+          touchAction: "pan-x pan-y",
+          WebkitOverflowScrolling: "touch",
+          overscrollBehaviorX: "contain",
+        }}
+        className={`no-scrollbar flex snap-x snap-proximity gap-2.5 overflow-x-auto overflow-y-hidden pb-3 sm:gap-4 ${
           isGrabbing ? "cursor-grabbing select-none" : "cursor-grab"
         }`}
       >
         {products.map((product, index) => (
           <div
             key={product.slug}
-            className="flex w-[160px] shrink-0 snap-start min-[360px]:w-[170px] min-[390px]:w-[180px] min-[430px]:w-[195px] sm:w-[calc((100%-2rem)/3)] xl:w-[calc((100%-4rem)/5.1)]"
+            className="flex w-[165px] shrink-0 snap-start min-[360px]:w-[172px] min-[390px]:w-[182px] min-[430px]:w-[195px] sm:w-[calc((100%-2rem)/3)] xl:w-[calc((100%-4rem)/5.1)]"
           >
             <ProductCard product={product} priority={index === 0} showSubtext={false} />
           </div>

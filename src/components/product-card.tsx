@@ -261,15 +261,6 @@ export function ProductCard({
               </div>
             )}
           </div>
-
-          {bundle ? (
-            <Link
-              href={productPath(product)}
-              className="mt-2 text-center text-xs font-medium tracking-wide text-[#6E2635] underline-offset-4 hover:underline"
-            >
-              Explore Celebration Box →
-            </Link>
-          ) : null}
         </div>
       </article>
 

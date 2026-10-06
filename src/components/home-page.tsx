@@ -146,24 +146,16 @@ export function HomePage() {
       <section className="w-full border-t border-stone-200/60 bg-[#FAF8F6] py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6E2635]">
-                  MADE FOR MOMENTS THAT MATTER
-                </p>
-                <h2 className="mt-1.5 font-serif text-[1.75rem] font-medium leading-[1.12] text-ink sm:mt-2 sm:text-5xl sm:leading-[1.05]">
-                  Celebrate With a Box They&apos;ll Remember.
-                </h2>
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600 sm:mt-3 sm:text-base">
-                  Bring together premium dry fruits, chocolates, coffee, tea and thoughtful surprises in beautifully curated celebration boxes.
-                </p>
-              </div>
-              <Link
-                href="/bundles"
-                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
-              >
-                Explore Celebration Boxes →
-              </Link>
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6E2635]">
+                MADE FOR MOMENTS THAT MATTER
+              </p>
+              <h2 className="mt-1.5 font-serif text-[1.75rem] font-medium leading-[1.12] text-ink sm:mt-2 sm:text-5xl sm:leading-[1.05]">
+                Celebrate With a Box They&apos;ll Remember.
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600 sm:mt-3 sm:text-base">
+                Bring together premium dry fruits, chocolates, coffee, tea and thoughtful surprises in beautifully curated celebration boxes.
+              </p>
             </div>
 
             {/* Celebration Categories Pills — Hidden on Mobile, Shown on Desktop */}
@@ -192,20 +184,12 @@ export function HomePage() {
       <section id="collections" className="w-full border-t border-stone-200/60 bg-white py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
-              <SectionHeading
-                accent="almond"
-                eyebrow={collections["dry-fruits"].eyebrow}
-                title={collections["dry-fruits"].title}
-                text="Clean Californian almonds, sweet Indian cashews, Iranian pistachios and plump dates graded for pure natural flavour."
-              />
-              <Link
-                href="/dry-fruits"
-                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
-              >
-                Explore Dry Fruits →
-              </Link>
-            </div>
+            <SectionHeading
+              accent="almond"
+              eyebrow={collections["dry-fruits"].eyebrow}
+              title={collections["dry-fruits"].title}
+              text="Clean Californian almonds, sweet Indian cashews, Iranian pistachios and plump dates graded for pure natural flavour."
+            />
           </Reveal>
           <div className="mt-5 sm:mt-8">
             <ProductCarousel products={dry} href="/dry-fruits" label="Explore All Dry Fruits →" />
@@ -219,20 +203,12 @@ export function HomePage() {
       <section className="w-full border-t border-stone-200/60 bg-[#FAF8F6] py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
-              <SectionHeading
-                accent="gold"
-                eyebrow="Customer Favourites"
-                title="The Products Everyone Keeps Coming Back For."
-                text="If you only have a minute, these are the signature selections our Ahmedabad customers love best."
-              />
-              <Link
-                href="/best-sellers"
-                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
-              >
-                Explore Best Sellers →
-              </Link>
-            </div>
+            <SectionHeading
+              accent="gold"
+              eyebrow="Customer Favourites"
+              title="The Products Everyone Keeps Coming Back For."
+              text="If you only have a minute, these are the signature selections our Ahmedabad customers love best."
+            />
           </Reveal>
           <div className="mt-5 sm:mt-8">
             <ProductCarousel products={loved} href="/best-sellers" label="Explore All Best Sellers →" />
@@ -246,20 +222,12 @@ export function HomePage() {
       <section className="w-full border-t border-stone-200/60 bg-white py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
-              <SectionHeading
-                accent="cocoa"
-                eyebrow={collections.chocolates.eyebrow}
-                title={collections.chocolates.title}
-                text="A softer kind of luxury. Handcrafted dark bark, creamy milk pralines, and gift boxes made for sweet moments."
-              />
-              <Link
-                href="/chocolates"
-                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
-              >
-                Explore Chocolates →
-              </Link>
-            </div>
+            <SectionHeading
+              accent="cocoa"
+              eyebrow={collections.chocolates.eyebrow}
+              title={collections.chocolates.title}
+              text="A softer kind of luxury. Handcrafted dark bark, creamy milk pralines, and gift boxes made for sweet moments."
+            />
           </Reveal>
           <div className="mt-5 sm:mt-8">
             <ProductCarousel products={chocolates} href="/chocolates" label="Explore All Chocolates →" />
@@ -273,20 +241,12 @@ export function HomePage() {
       <section className="w-full border-t border-stone-200/60 bg-[#FAF8F6] py-10 sm:py-16 lg:py-20">
         <div className="shell">
           <Reveal>
-            <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
-              <SectionHeading
-                accent="caramel"
-                eyebrow={collections["coffee-tea"].eyebrow}
-                title={collections["coffee-tea"].title}
-                text="Filter coffee for the traditional tumbler. Darjeeling first flush and Kashmiri kahwa for the quiet cup."
-              />
-              <Link
-                href="/coffee-tea"
-                className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
-              >
-                Explore Coffee & Tea →
-              </Link>
-            </div>
+            <SectionHeading
+              accent="caramel"
+              eyebrow={collections["coffee-tea"].eyebrow}
+              title={collections["coffee-tea"].title}
+              text="Filter coffee for the traditional tumbler. Darjeeling first flush and Kashmiri kahwa for the quiet cup."
+            />
           </Reveal>
           <div className="mt-5 sm:mt-8">
             <ProductCarousel products={brews} href="/coffee-tea" label="Explore All Coffee & Tea →" />
