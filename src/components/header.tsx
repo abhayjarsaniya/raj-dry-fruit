@@ -106,8 +106,8 @@ export function Header() {
             ) : null}
           </button>
 
-          {/* Desktop WhatsApp Action (Large screens 2xl+) */}
-          <InquiryLink className="hidden min-h-[44px] items-center rounded-full bg-[#6E2635] px-4.5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#5A1E2B] 2xl:inline-flex">
+          {/* Desktop WhatsApp Action (Large screens xl+) */}
+          <InquiryLink className="hidden h-10 items-center justify-center rounded-full bg-[#6E2635] px-[18px] text-xs font-semibold text-white shadow-sm transition hover:bg-[#5A1E2B] xl:inline-flex">
             Send Inquiry on WhatsApp
           </InquiryLink>
 
