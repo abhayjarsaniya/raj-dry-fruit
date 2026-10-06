@@ -42,8 +42,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-stone-200 bg-[#fbf9f6] p-5 sm:p-6">
-            <div className="flex items-center justify-between border-b border-stone-200 pb-3">
+          <div className="mt-8 rounded-2xl border border-stone-200 bg-[#fbf9f6] p-4 min-[360px]:p-5 sm:p-6">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-200 pb-3">
               <h2 className="font-serif text-lg font-semibold text-ink sm:text-xl">{STORE_NAME}</h2>
               <span className="rounded-full bg-[#6E2635]/10 px-2.5 py-0.5 text-xs font-semibold text-[#6E2635]">
                 ★ {STORE_RATING} on Google
@@ -54,7 +54,7 @@ export default function AboutPage() {
               <p>{STORE_ADDRESS.line2}</p>
               <p>{STORE_ADDRESS.area}, {STORE_ADDRESS.city} – {STORE_ADDRESS.pincode}</p>
             </address>
-            <div className="mt-4 flex flex-wrap gap-4 text-xs font-semibold text-[#6E2635]">
+            <div className="mt-4 flex flex-col gap-2 min-[400px]:flex-row min-[400px]:flex-wrap min-[400px]:items-center min-[400px]:gap-3 text-xs font-semibold text-[#6E2635]">
               <a
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
@@ -63,7 +63,7 @@ export default function AboutPage() {
               >
                 Get Directions on Google Maps →
               </a>
-              <span className="text-stone-300">·</span>
+              <span className="hidden text-stone-300 min-[400px]:inline">·</span>
               <span>Phone / WhatsApp: {WHATSAPP_DISPLAY}</span>
             </div>
           </div>

@@ -40,14 +40,14 @@ export function Footer() {
           </p>
 
           <div className="mt-5 rounded-2xl border border-stone-100 bg-[#fbf9f6] p-4 text-xs leading-relaxed text-stone-600 sm:max-w-md">
-            <div className="flex items-center justify-between font-medium text-ink">
+            <div className="flex flex-wrap items-center justify-between gap-1.5 font-medium text-ink">
               <span>{STORE_NAME}</span>
               <span className="flex items-center gap-1 rounded bg-[#6E2635]/10 px-2 py-0.5 text-[11px] font-semibold text-[#6E2635]">
                 ★ {STORE_RATING}
               </span>
             </div>
             <p className="mt-1 text-stone-500">{STORE_ADDRESS.full}</p>
-            <div className="mt-3 flex flex-wrap items-center gap-3">
+            <div className="mt-3 flex flex-col gap-1.5 min-[380px]:flex-row min-[380px]:flex-wrap min-[380px]:items-center min-[380px]:gap-2.5">
               <a
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
@@ -56,7 +56,7 @@ export function Footer() {
               >
                 Get Directions on Google Maps →
               </a>
-              <span className="text-stone-300">·</span>
+              <span className="hidden text-stone-300 min-[380px]:inline">·</span>
               <a
                 href={whatsappHref(generalInquiryMessage())}
                 target="_blank"

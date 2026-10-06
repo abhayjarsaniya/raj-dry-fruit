@@ -73,12 +73,12 @@ export function Header() {
         </nav>
 
         {/* RIGHT: Actions */}
-        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5">
+        <div className="flex shrink-0 items-center gap-1 min-[360px]:gap-1.5 sm:gap-2.5">
           {/* Search Trigger */}
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
-            className="inline-flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full border border-[#e6e2dc] text-stone-600 transition hover:border-[#6E2635] hover:text-[#6E2635] sm:w-auto sm:px-3.5"
+            className="inline-flex h-9 w-9 min-[360px]:h-10 min-[360px]:w-10 shrink-0 items-center justify-center gap-2 rounded-full border border-[#e6e2dc] text-stone-600 transition hover:border-[#6E2635] hover:text-[#6E2635] sm:w-auto sm:px-3.5"
             aria-label="Search catalog"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -92,7 +92,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setCartOpen(true)}
-            className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#e6e2dc] text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635]"
+            className="relative inline-flex h-9 w-9 min-[360px]:h-10 min-[360px]:w-10 shrink-0 items-center justify-center rounded-full border border-[#e6e2dc] text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635]"
             aria-label={`Open cart, ${totalCount} items`}
           >
             <CartBagGlyph />
@@ -114,7 +114,7 @@ export function Header() {
           {/* Mobile / Tablet Hamburger & Close Button */}
           <button
             type="button"
-            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#e6e2dc] text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635] active:scale-95 lg:hidden"
+            className="inline-flex h-9 w-9 min-[360px]:h-10 min-[360px]:w-10 shrink-0 items-center justify-center rounded-full border border-[#e6e2dc] text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635] active:scale-95 lg:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(!menuOpen)}

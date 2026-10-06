@@ -31,22 +31,22 @@ export default function ContactPage() {
             Availability, fresh pricing and delivery are confirmed directly in chat. Write to us, or visit our retail store in Ahmedabad.
           </p>
 
-          <div className="mt-8 rounded-2xl border border-stone-200 bg-[#fbf9f6] p-6">
-            <div className="flex items-center justify-between border-b border-stone-200 pb-3">
-              <h2 className="font-serif text-xl font-semibold text-ink">{STORE_NAME}</h2>
+          <div className="mt-8 rounded-2xl border border-stone-200 bg-[#fbf9f6] p-4 min-[360px]:p-5 sm:p-6">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-200 pb-3">
+              <h2 className="font-serif text-lg font-semibold text-ink sm:text-xl">{STORE_NAME}</h2>
               <span className="rounded-full bg-[#6E2635]/10 px-2.5 py-0.5 text-xs font-semibold text-[#6E2635]">
                 ★ {STORE_RATING}
               </span>
             </div>
 
-            <address className="mt-3 not-italic text-sm leading-relaxed text-stone-600">
+            <address className="mt-3 not-italic text-xs leading-relaxed text-stone-600 sm:text-sm">
               <p className="font-medium text-ink">{STORE_ADDRESS.line1}</p>
               <p>{STORE_ADDRESS.line2}</p>
               <p>{STORE_ADDRESS.area}, {STORE_ADDRESS.city}</p>
               <p>{STORE_ADDRESS.state} – {STORE_ADDRESS.pincode}</p>
             </address>
 
-            <div className="mt-4 flex flex-wrap gap-3">
+            <div className="mt-4 flex flex-col gap-2 min-[400px]:flex-row min-[400px]:flex-wrap min-[400px]:items-center min-[400px]:gap-3">
               <a
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
@@ -55,7 +55,7 @@ export default function ContactPage() {
               >
                 Get Directions on Google Maps →
               </a>
-              <span className="text-stone-300">·</span>
+              <span className="hidden text-stone-300 min-[400px]:inline">·</span>
               <a
                 href={whatsappHref(generalInquiryMessage())}
                 target="_blank"

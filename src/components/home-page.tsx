@@ -273,29 +273,38 @@ export function HomePage() {
                     Walk in to experience our complete assortment of dry fruits, mukhwas, celebration gift boxes and festive hampers in person.
                   </p>
 
-                  <div className="mt-6 rounded-2xl border border-stone-200 bg-white p-4.5 shadow-xs sm:p-5">
-                    <div className="flex items-center justify-between border-b border-stone-100 pb-3">
-                      <h3 className="font-serif text-lg font-semibold text-ink sm:text-xl">{STORE_NAME}</h3>
-                      <div className="flex items-center gap-1 rounded-full bg-[#6E2635]/10 px-2.5 py-0.5 text-xs font-semibold text-[#6E2635]">
-                        <span>★</span>
-                        <span>{STORE_RATING}</span>
-                      </div>
+                  <div className="mt-6 w-full h-auto min-h-0 rounded-2xl border border-stone-200 bg-white p-4 min-[360px]:p-5 sm:p-6 shadow-xs">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-100 pb-3 sm:pb-3.5">
+                      <h3 className="font-serif text-base min-[360px]:text-lg font-semibold text-ink sm:text-xl">{STORE_NAME}</h3>
+                      <span className="shrink-0 rounded-full bg-[#6E2635]/10 px-2.5 py-1 text-xs font-semibold text-[#6E2635]">
+                        ★ {STORE_RATING} ★
+                      </span>
                     </div>
-                    <address className="mt-3 not-italic text-xs leading-relaxed text-stone-600 sm:text-sm">
+                    <address className="mt-3.5 not-italic text-xs leading-relaxed text-stone-600 sm:text-sm space-y-1">
                       <p className="font-medium text-ink">{STORE_ADDRESS.line1}</p>
                       <p>{STORE_ADDRESS.line2}</p>
                       <p>{STORE_ADDRESS.area}, {STORE_ADDRESS.city}</p>
                       <p>{STORE_ADDRESS.state} – {STORE_ADDRESS.pincode}</p>
-                      <p className="mt-2 text-xs font-medium text-stone-500">Phone / WhatsApp: {WHATSAPP_DISPLAY}</p>
+                      <div className="mt-3.5 pt-3 border-t border-stone-100 flex flex-wrap items-center gap-1.5 text-xs text-stone-500 sm:text-sm">
+                        <span className="font-medium text-ink">Phone / WhatsApp:</span>
+                        <a
+                          href={whatsappHref(generalInquiryMessage())}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold text-[#6E2635] hover:underline"
+                        >
+                          {WHATSAPP_DISPLAY}
+                        </a>
+                      </div>
                     </address>
                   </div>
 
-                  <div className="mt-6 flex flex-wrap gap-3">
+                  <div className="mt-5 flex flex-col gap-2.5 sm:mt-6 sm:flex-row sm:flex-wrap sm:gap-3">
                     <a
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] sm:h-12"
+                      className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] px-6 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] active:scale-[0.99] sm:h-12 sm:w-auto"
                     >
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <polygon points="3 11 22 2 13 21 11 13 3 11"/>
@@ -306,7 +315,7 @@ export function HomePage() {
                       href={whatsappHref(generalInquiryMessage())}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-6 text-sm font-medium text-stone-800 transition hover:border-[#6E2635] hover:text-[#6E2635] sm:h-12"
+                      className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-6 text-sm font-medium text-stone-800 transition hover:border-[#6E2635] hover:text-[#6E2635] active:scale-[0.99] sm:h-12 sm:w-auto"
                     >
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.4a10 10 0 0 0 4.65 1.18h.01c5.46 0 9.89-4.4 9.89-9.84C21.94 6.4 17.5 2 12.04 2Zm5.76 14.04c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.41-.14-.95-.31-1.63-.6-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.24-.28.64-.4.85-.4h.2c.2 0 .4-.02.58.02.22.04.46.24.64.64.2.46.64 1.58.7 1.7.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.24.24-.1.47.14.23.62 1.02 1.33 1.65.92.82 1.69 1.08 1.93 1.2.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.18 1.26Z" />
@@ -317,20 +326,18 @@ export function HomePage() {
                 </div>
 
                 {/* Store illustration card / location highlight */}
-                <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border border-stone-200 bg-white p-5 shadow-xs sm:aspect-[4/3] sm:rounded-3xl sm:p-6">
-                  <div className="text-center">
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#fbf5f5] text-xl text-[#6E2635] sm:h-16 sm:w-16 sm:text-2xl">
-                      📍
-                    </div>
-                    <h3 className="mt-3 font-serif text-xl font-semibold text-ink sm:mt-4 sm:text-2xl">Store Location</h3>
-                    <p className="mt-1 text-xs font-medium text-[#6E2635] sm:text-sm">Anand Nagar Road, Ahmedabad</p>
-                    <p className="mt-2.5 max-w-sm text-xs leading-relaxed text-stone-500">
-                      Beside Natraj Medical, Radha Apartments, 100 Feet Anand Nagar Road, Jodhpur Village. Easy parking and warm service.
-                    </p>
-                    <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-3.5 py-1.5 text-[11px] text-stone-600 sm:px-4 sm:py-2 sm:text-xs">
-                      <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                      <span>Open all week for inquiries &amp; visits</span>
-                    </div>
+                <div className="relative flex w-full h-auto min-h-0 flex-col items-center justify-center rounded-2xl border border-stone-200 bg-white p-5 text-center shadow-xs sm:rounded-3xl sm:p-7 sm:aspect-[4/3] lg:aspect-auto">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#fbf5f5] text-xl text-[#6E2635] sm:h-16 sm:w-16 sm:text-2xl">
+                    📍
+                  </div>
+                  <h3 className="mt-3 font-serif text-xl font-semibold text-ink sm:mt-4 sm:text-2xl">Store Location</h3>
+                  <p className="mt-1 text-xs font-medium text-[#6E2635] sm:text-sm">Anand Nagar Road, Ahmedabad</p>
+                  <p className="mt-2.5 max-w-sm text-xs leading-relaxed text-stone-500">
+                    Beside Natraj Medical, Radha Apartments, 100 Feet Anand Nagar Road, Jodhpur Village. Easy parking and warm service.
+                  </p>
+                  <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-3.5 py-1.5 text-[11px] text-stone-600 sm:px-4 sm:py-2 sm:text-xs">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                    <span>Open all week for inquiries &amp; visits</span>
                   </div>
                 </div>
               </div>
