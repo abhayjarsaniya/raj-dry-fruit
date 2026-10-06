@@ -37,7 +37,11 @@ export function SearchDialog() {
             aria-label="Search products"
             className="h-14 flex-1 rounded-full border border-stone-200 px-5 text-base outline-none focus:border-ink"
           />
-          <button type="button" onClick={() => setSearchOpen(false)} className="h-14 rounded-full px-4 text-sm">
+          <button
+            type="button"
+            onClick={() => setSearchOpen(false)}
+            className="inline-flex h-14 min-w-[72px] items-center justify-center rounded-full px-4 text-sm font-semibold text-stone-600 transition hover:text-[#6E2635] active:scale-95"
+          >
             Close
           </button>
         </div>
@@ -47,7 +51,7 @@ export function SearchDialog() {
               key={hint}
               type="button"
               onClick={() => setQuery(hint)}
-              className="rounded-full bg-mist px-3 py-2 text-xs uppercase tracking-[0.14em] text-stone-600"
+              className="inline-flex min-h-[42px] items-center rounded-full border border-stone-200 bg-mist px-3.5 py-2 text-xs font-medium uppercase tracking-[0.14em] text-stone-600 transition hover:border-[#6E2635] hover:text-[#6E2635]"
             >
               {hint}
             </button>
@@ -64,7 +68,7 @@ export function SearchDialog() {
                 <p className="text-sm text-stone-500">{results.length} matches</p>
                 <button
                   type="button"
-                  className="text-sm underline underline-offset-4"
+                  className="inline-flex min-h-[44px] items-center text-sm font-semibold text-[#6E2635] underline underline-offset-4"
                   onClick={() => {
                     setSearchOpen(false);
                     router.push(`/search?q=${encodeURIComponent(query.trim())}`);

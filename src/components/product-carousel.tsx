@@ -82,7 +82,7 @@ export function ProductCarousel({
       <div className="mb-3.5 flex items-center justify-between sm:mb-6 sm:justify-end sm:gap-2">
         <Link
           href={href}
-          className="text-xs font-semibold tracking-wide text-[#6E2635] underline-offset-4 hover:underline sm:order-last sm:ml-2 sm:text-sm"
+          className="inline-flex min-h-[44px] items-center text-xs font-semibold tracking-wide text-[#6E2635] underline-offset-4 hover:underline sm:order-last sm:ml-2 sm:text-sm"
         >
           {label}
         </Link>
@@ -91,7 +91,7 @@ export function ProductCarousel({
             type="button"
             aria-label="Scroll products back"
             onClick={() => scrollBy(-1)}
-            className="hidden h-10 w-10 items-center justify-center rounded-full border border-stone-200 text-base text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635] md:inline-flex"
+            className="hidden h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-stone-200 text-base text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635] active:scale-95 md:inline-flex"
           >
             ←
           </button>
@@ -99,7 +99,7 @@ export function ProductCarousel({
             type="button"
             aria-label="Scroll products forward"
             onClick={() => scrollBy(1)}
-            className="hidden h-10 w-10 items-center justify-center rounded-full border border-stone-200 text-base text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635] md:inline-flex"
+            className="hidden h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-stone-200 text-base text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635] active:scale-95 md:inline-flex"
           >
             →
           </button>

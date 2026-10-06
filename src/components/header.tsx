@@ -48,7 +48,7 @@ export function Header() {
 
         {/* CENTER: Navigation Links (Strictly Centered in Header container) */}
         <nav
-          className="absolute left-1/2 -translate-x-1/2 hidden items-center gap-5 xl:gap-6.5 lg:flex"
+          className="absolute left-1/2 -translate-x-1/2 hidden items-center gap-3.5 xl:gap-5 2xl:gap-6.5 lg:flex"
           aria-label="Primary"
         >
           {links.map((link) => {
@@ -57,7 +57,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`group relative py-1 text-[13px] font-medium tracking-wide transition-colors duration-200 hover:text-[#6E2635] ${
+                className={`group relative py-1 text-[12px] font-medium tracking-wide transition-colors duration-200 hover:text-[#6E2635] xl:text-[13px] ${
                   isActive ? "font-semibold text-[#6E2635]" : "text-stone-600"
                 }`}
               >
@@ -106,8 +106,8 @@ export function Header() {
             ) : null}
           </button>
 
-          {/* Desktop WhatsApp Action (Large screens xl+) */}
-          <InquiryLink className="hidden h-10 items-center rounded-full bg-[#6E2635] px-4 text-xs font-medium text-white shadow-sm transition hover:bg-[#5A1E2B] xl:inline-flex">
+          {/* Desktop WhatsApp Action (Large screens 2xl+) */}
+          <InquiryLink className="hidden min-h-[44px] items-center rounded-full bg-[#6E2635] px-4.5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#5A1E2B] 2xl:inline-flex">
             Send Inquiry on WhatsApp
           </InquiryLink>
 

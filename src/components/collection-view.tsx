@@ -150,7 +150,7 @@ export function CollectionView({ id }: { id: CollectionId }) {
                 setGroup("All");
                 setCategory("All");
               }}
-              className="mt-4 inline-flex h-10 items-center justify-center rounded-full border border-[#6E2635] px-5 text-xs font-medium text-[#6E2635]"
+              className="mt-4 inline-flex min-h-[44px] items-center justify-center rounded-full border border-[#6E2635] px-5 py-2 text-xs font-semibold text-[#6E2635] transition hover:bg-[#6E2635]/5 active:scale-95 sm:text-sm"
             >
               Reset Filters
             </button>
@@ -176,7 +176,7 @@ export function CollectionView({ id }: { id: CollectionId }) {
           <button
             type="button"
             onClick={() => openInquiry()}
-            className="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-[#6E2635] px-7 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B]"
+            className="mt-6 inline-flex min-h-[50px] w-full items-center justify-center rounded-full bg-[#6E2635] px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#5A1E2B] active:scale-[0.99] sm:w-auto"
           >
             Send Inquiry on WhatsApp →
           </button>

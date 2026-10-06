@@ -204,7 +204,7 @@ export function ProductCard({
                     setSheetQty(1);
                     setMobileSheetOpen(true);
                   }}
-                  className="inline-flex min-h-[40px] min-w-[64px] items-center justify-center rounded-full bg-[#6E2635] px-4 text-xs font-medium text-white shadow-sm active:scale-95"
+                  className="inline-flex min-h-[44px] min-w-[70px] items-center justify-center rounded-full bg-[#6E2635] px-4.5 text-xs font-semibold text-white shadow-sm active:scale-95 sm:text-sm"
                 >
                   Add
                 </button>
@@ -220,24 +220,24 @@ export function ProductCard({
                       setSheetQty(currentQty);
                       setMobileSheetOpen(true);
                     }}
-                    className="inline-flex items-center gap-1 rounded-full border border-[#6E2635] bg-white px-2 py-0.5 text-[11px] font-semibold text-[#6E2635]"
+                    className="inline-flex min-h-[36px] items-center gap-1 rounded-full border border-[#6E2635] bg-white px-2.5 py-1 text-[11px] font-semibold text-[#6E2635]"
                     title="Change weight"
                   >
                     <span>{activeWeight}</span>
                     <span className="text-[8px] text-[#6E2635]/70">▼</span>
                   </button>
-                  <span className="font-serif text-[13px] font-semibold text-ink min-[360px]:text-sm">
+                  <span className="font-serif text-[13.5px] font-semibold text-ink min-[360px]:text-sm">
                     {formatPrice(price * currentQty)}
                   </span>
                 </div>
 
                 <div className="flex items-center justify-end">
-                  <div className="inline-flex min-h-[40px] w-full items-center justify-between rounded-full border border-stone-200 bg-white text-[#6E2635] shadow-sm">
+                  <div className="inline-flex min-h-[44px] w-full items-center justify-between rounded-full border border-stone-200 bg-white text-[#6E2635] shadow-sm">
                     <button
                       type="button"
                       aria-label={`Decrease ${product.name}`}
                       onClick={handleDecrement}
-                      className="flex h-10 w-10 items-center justify-center rounded-l-full text-base font-semibold active:scale-90"
+                      className="flex h-11 w-11 items-center justify-center rounded-l-full text-base font-semibold active:scale-90"
                     >
                       −
                     </button>
@@ -247,7 +247,7 @@ export function ProductCard({
                       aria-label={`Increase ${product.name}`}
                       disabled={currentQty >= 10}
                       onClick={handleIncrement}
-                      className={`flex h-10 w-10 items-center justify-center rounded-r-full text-base font-semibold active:scale-90 ${
+                      className={`flex h-11 w-11 items-center justify-center rounded-r-full text-base font-semibold active:scale-90 ${
                         currentQty >= 10 ? "cursor-not-allowed opacity-25" : ""
                       }`}
                     >
@@ -301,7 +301,7 @@ export function ProductCard({
               <button
                 type="button"
                 onClick={() => setMobileSheetOpen(false)}
-                className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-stone-200 text-stone-500 hover:text-ink"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-stone-200 text-stone-500 hover:text-ink active:scale-95"
                 aria-label="Close"
               >
                 ✕
@@ -343,7 +343,7 @@ export function ProductCard({
                 <p className="text-xs text-stone-400">Maximum 10 per product</p>
               </div>
 
-              <div className="inline-flex min-h-[44px] items-center rounded-full border border-stone-200 bg-white text-[#6E2635] shadow-sm">
+              <div className="inline-flex min-h-[46px] items-center rounded-full border border-stone-200 bg-white text-[#6E2635] shadow-sm">
                 <button
                   type="button"
                   onClick={() => setSheetQty((q) => Math.max(1, q - 1))}
@@ -372,7 +372,7 @@ export function ProductCard({
               <button
                 type="button"
                 onClick={handleMobileConfirm}
-                className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] text-sm font-medium text-white shadow-md active:scale-[0.99]"
+                className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] px-4 py-3 text-sm font-semibold text-white shadow-md active:scale-[0.99]"
               >
                 <span>Add to Inquiry</span>
                 <span>·</span>

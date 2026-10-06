@@ -71,11 +71,11 @@ export default function AboutPage() {
           <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-3.5">
             <Link
               href="/dry-fruits"
-              className="inline-flex h-12 w-full items-center justify-center rounded-full bg-[#6E2635] px-7 text-sm font-medium text-white shadow-md transition hover:bg-[#5A1E2B] active:scale-[0.99] sm:w-auto"
+              className="inline-flex min-h-[50px] w-full items-center justify-center rounded-full bg-[#6E2635] px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#5A1E2B] active:scale-[0.99] sm:w-auto"
             >
               Explore Dry Fruits
             </Link>
-            <InquiryLink className="inline-flex h-12 w-full items-center justify-center rounded-full border border-[#6E2635] bg-white px-6 text-sm font-medium text-[#6E2635] shadow-sm transition hover:bg-[#6E2635]/5 active:scale-[0.99] sm:w-auto">
+            <InquiryLink className="inline-flex min-h-[50px] w-full items-center justify-center rounded-full border border-[#6E2635] bg-white px-6 py-3 text-sm font-semibold text-[#6E2635] shadow-sm transition hover:bg-[#6E2635]/5 active:scale-[0.99] sm:w-auto">
               Send Inquiry on WhatsApp
             </InquiryLink>
           </div>

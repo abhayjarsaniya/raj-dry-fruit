@@ -129,7 +129,7 @@ export function CartDrawer() {
                         <button
                           type="button"
                           onClick={() => removeItem(line.slug, line.weight)}
-                          className="min-h-[32px] px-1 text-xs text-stone-400 transition-colors [@media(hover:hover)]:hover:text-[#6E2635]"
+                          className="inline-flex min-h-[40px] items-center px-2 py-1 text-xs text-stone-400 transition-colors [@media(hover:hover)]:hover:text-[#6E2635]"
                           aria-label={`Remove ${product.name}`}
                         >
                           Remove
@@ -214,7 +214,7 @@ export function CartDrawer() {
             <button
               type="button"
               onClick={() => openInquiry()}
-              className="mt-4 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] text-sm font-medium text-white shadow-md transition-all duration-200 active:scale-[0.99] [@media(hover:hover)]:hover:-translate-y-[1px] [@media(hover:hover)]:hover:bg-[#5A1E2B]"
+              className="mt-4 flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 active:scale-[0.99] [@media(hover:hover)]:hover:-translate-y-[1px] [@media(hover:hover)]:hover:bg-[#5A1E2B]"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.4a10 10 0 0 0 4.65 1.18h.01c5.46 0 9.89-4.4 9.89-9.84C21.94 6.4 17.5 2 12.04 2Zm5.76 14.04c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.41-.14-.95-.31-1.63-.6-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.24-.28.64-.4.85-.4h.2c.2 0 .4-.02.58.02.22.04.46.24.64.64.2.46.64 1.58.7 1.7.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.24.24-.1.47.14.23.62 1.02 1.33 1.65.92.82 1.69 1.08 1.93 1.2.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.18 1.26Z" />
@@ -225,7 +225,7 @@ export function CartDrawer() {
             <button
               type="button"
               onClick={() => setCartOpen(false)}
-              className="mt-2.5 flex h-11 w-full items-center justify-center rounded-full border border-stone-300 bg-white text-xs font-medium text-stone-700 transition-colors [@media(hover:hover)]:hover:border-ink [@media(hover:hover)]:hover:text-ink"
+              className="mt-2.5 flex min-h-[46px] w-full items-center justify-center rounded-full border border-stone-300 bg-white px-5 py-2.5 text-xs font-medium text-stone-700 transition-colors sm:text-sm [@media(hover:hover)]:hover:border-ink [@media(hover:hover)]:hover:text-ink"
             >
               Continue Shopping
             </button>
@@ -274,7 +274,7 @@ export function MobileDock() {
       <button
         type="button"
         onClick={() => setCartOpen(true)}
-        className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] text-sm font-medium text-white shadow-md transition-all active:scale-[0.99]"
+        className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] px-5 py-3 text-sm font-semibold text-white shadow-md transition-all active:scale-[0.99]"
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path

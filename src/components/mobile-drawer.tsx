@@ -147,7 +147,7 @@ export function MobileDrawer() {
             <div className="flex flex-col gap-2.5">
               <InquiryLink
                 onClick={() => setMenuOpen(false)}
-                className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] px-4 py-2.5 text-xs font-medium text-white shadow-sm transition hover:bg-[#5A1E2B] active:scale-[0.99]"
+                className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[#6E2635] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#5A1E2B] active:scale-[0.99]"
               >
                 <span>WhatsApp Inquiry</span>
               </InquiryLink>
@@ -157,7 +157,7 @@ export function MobileDrawer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}
-                className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2.5 text-xs font-medium text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635]"
+                className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-stone-700 transition hover:border-[#6E2635] hover:text-[#6E2635] active:scale-[0.99]"
               >
                 <span>Visit Store / Directions ↗</span>
               </a>
